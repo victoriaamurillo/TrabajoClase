@@ -11,11 +11,14 @@ import java.util.Calendar;
  * @author Administrator
  */
 public class EmpleadoTemporal extends EmpleadoComun {
+
+    
     private Calendar finContrato;
 
     public EmpleadoTemporal(int code, String name) {
         super(code, name, 15000);
         this.finContrato = Calendar.getInstance();
+        finContrato.add(Calendar.MONTH, 6);
     }
     
     @Override
@@ -32,7 +35,13 @@ public class EmpleadoTemporal extends EmpleadoComun {
     
     
     }
-    
+    public Calendar getFinContrato() {
+        return finContrato;
+    }
+
+    public void setFinContrato(Calendar finContrato) {
+        this.finContrato = finContrato;
+    }
     
     
     
